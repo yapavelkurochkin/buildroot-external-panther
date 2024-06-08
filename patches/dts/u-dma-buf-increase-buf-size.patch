@@ -1,0 +1,54 @@
+diff --git a/arch/riscv/boot/dts/microchip/mpfs-icicle-kit.dts b/arch/riscv/boot/dts/microchip/mpfs-icicle-kit.dts
+index c247ed8a3..679c75626 100644
+--- a/arch/riscv/boot/dts/microchip/mpfs-icicle-kit.dts
++++ b/arch/riscv/boot/dts/microchip/mpfs-icicle-kit.dts
+@@ -95,19 +95,19 @@ dma_non_cached_high: non-cached-high-buffer {
+ 
+ 		fabricbuf0ddrc: buffer@88000000 {
+ 			compatible = "shared-dma-pool";
+-			reg = <0x0 0x88000000 0x0 0x2000000>;
++			reg = <0x0 0x88000000 0x0 0x8000000>;
+ 			no-map;
+ 		};
+ 
+ 		fabricbuf1ddrnc: buffer@c8000000 {
+ 			compatible = "shared-dma-pool";
+-			reg = <0x0 0xc8000000 0x0 0x2000000>;
++			reg = <0x0 0xc8000000 0x0 0x8000000>;
+ 			no-map;
+ 		};
+ 
+ 		fabricbuf2ddrncwcb: buffer@d8000000 {
+ 			compatible = "shared-dma-pool";
+-			reg = <0x0 0xd8000000 0x0 0x2000000>;
++			reg = <0x0 0xd8000000 0x0 0x8000000>;
+ 			no-map;
+ 		};
+ 	};
+@@ -116,7 +116,7 @@ udmabuf0 {
+ 		compatible = "ikwzm,u-dma-buf";
+ 		device-name = "udmabuf-ddr-c0";
+ 		minor-number = <0>;
+-		size = <0x0 0x2000000>;
++		size = <0x0 0x8000000>;
+ 		memory-region = <&fabricbuf0ddrc>;
+ 		sync-mode = <3>;
+ 	};
+@@ -125,7 +125,7 @@ udmabuf1 {
+ 		compatible = "ikwzm,u-dma-buf";
+ 		device-name = "udmabuf-ddr-nc0";
+ 		minor-number = <1>;
+-		size = <0x0 0x2000000>;
++		size = <0x0 0x8000000>;
+ 		memory-region = <&fabricbuf1ddrnc>;
+ 		sync-mode = <3>;
+ 	};
+@@ -134,7 +134,7 @@ udmabuf2 {
+ 		compatible = "ikwzm,u-dma-buf";
+ 		device-name = "udmabuf-ddr-nc-wcb0";
+ 		minor-number = <2>;
+-		size = <0x0 0x2000000>;
++		size = <0x0 0x8000000>;
+ 		memory-region = <&fabricbuf2ddrncwcb>;
+ 		sync-mode = <3>;
+ 	};
