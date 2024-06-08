@@ -2,10 +2,10 @@ auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet dhcp
-  pre-up /etc/network/nfs_check
-  wait-delay 15
-  hostname $(hostname)
+iface eth0 inet static
+  address 10.22.33.44
+  netmask 255.255.255.0
+  mtu 3000
 
 auto eth1
 iface eth1 inet dhcp
