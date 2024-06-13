@@ -1,0 +1,25 @@
+diff --git a/arch/riscv/configs/mpfs_defconfig b/arch/riscv/configs/mpfs_defconfig
+index e53e91ff7..c8ab4fdab 100644
+--- a/arch/riscv/configs/mpfs_defconfig
++++ b/arch/riscv/configs/mpfs_defconfig
+@@ -23,9 +23,9 @@ CONFIG_NET=y
+ CONFIG_PACKET=y
+ CONFIG_UNIX=y
+ CONFIG_INET=y
+-CONFIG_PCI=y
+-CONFIG_PCI_HOST_GENERIC=y
+-CONFIG_PCIE_MICROCHIP_HOST=y
++CONFIG_PCI=n
++CONFIG_PCI_HOST_GENERIC=n
++CONFIG_PCIE_MICROCHIP_HOST=n
+ CONFIG_DEVTMPFS=y
+ CONFIG_DEVTMPFS_MOUNT=y
+ CONFIG_FW_LOADER_USER_HELPER=y
+@@ -149,5 +149,5 @@ CONFIG_STACKTRACE=y
+ CONFIG_SAMPLES=y
+ CONFIG_SAMPLE_RPMSG_CLIENT=m
+ CONFIG_STRICT_DEVMEM=y
+-CONFIG_CAN=y
+-CONFIG_CAN_POLARFIRE_SOC=y
++CONFIG_CAN=n
++CONFIG_CAN_POLARFIRE_SOC=n
